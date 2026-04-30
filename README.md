@@ -68,28 +68,34 @@ python hay/hay-tg_bot.py
 
 ```mermaid
 C4Context
-    title System Context diagram for PineconeManager System
+    title System Context diagram for FinAnalyst Haystack-Agent
     
-    Person(user, "Пользователь", "Отправляет сообщения")
+    Person(user, "Пользователь", "Отправляет финансовые запросы")
     System_Ext(telegram_api, "Telegram API", "Мессенджер")
-    System(bot_system, "Bot System", "Логика и память")
+    System(bot_system, "FinAnalyst Bot System", "Haystack Agent с финансовыми инструментами")
     
-    System_Ext(openai_api, "OpenAI API", "Эмбеддинги")
-    System_Ext(pinecone_db, "Pinecone DB", "Векторная БД")
+    System_Ext(openai_api, "OpenAI API", "Генерация ответов и анализ изображений")
+    System_Ext(pinecone_db, "Pinecone DB", "Векторная БД для долговременной памяти")
+    System_Ext(alpha_vantage, "Alpha Vantage API", "Финансовые данные и новости")
+    System_Ext(finviz_api, "Finviz API", "Финансовые графики")
+    System_Ext(serperdev_api, "SerperDev API", "Google веб-поиск")
 
-    Rel(user, telegram_api, "Текст", "HTTPS")
+    Rel(user, telegram_api, "Финансовые запросы", "HTTPS")
     Rel_D(telegram_api, bot_system, "Запрос", "HTTPS")
     
     Rel_R(bot_system, openai_api, "REST")
     Rel_L(bot_system, pinecone_db, "gRPC")
+    Rel_R(bot_system, alpha_vantage, "REST")
+    Rel_R(bot_system, finviz_api, "HTTP")
+    Rel_R(bot_system, serperdev_api, "REST")
     
-    Rel_U(bot_system, telegram_api, "Ответ", "HTTPS")
+    Rel_U(bot_system, telegram_api, "Ответы и графики", "HTTPS")
 ```
 
 </div>
 </div>
 
-### UML Sequence Diagram: Логика "Умной памяти"
+### UML Sequence Diagram: Финансовый анализ и "Умная память"
 
 <div align="center">
 <div style="background-color: white; padding: 20px; border-radius: 10px;">
@@ -98,29 +104,52 @@ C4Context
 sequenceDiagram
     participant U as Пользователь
     participant B as Telegram Bot
+    participant HA as Haystack Agent
     participant PM as PineconeManager
     participant OA as OpenAI API
     participant P as Pinecone DB
+    participant AV as Alpha Vantage
+    participant FV as Finviz
+    participant SD as SerperDev
 
-    U->>B: Сообщение "Хочу на Марс"
-    B->>PM: upsert_document("Хочу на Марс")
-    PM->>OA: create_embedding
-    OA-->>PM: vector
+    U->>B: Запрос "Покажи график TSLA"
+    B->>HA: Передача запроса
     
-    PM->>P: query (найти самый похожий)
-    P-->>PM: match (score: 0.94)
-    
-    Note over PM: THRESHOLD = 0.9
-    
-    alt score > 0.9
-        PM->>P: upsert (ID существующего вектора)
-        PM-->>B: {action: "updated", score: 0.94}
-        B->>U: "🔄 Похожее уже было, обновил запись"
-    else score <= 0.9
-        PM->>P: upsert (новый ID)
-        PM-->>B: {action: "inserted"}
-        B->>U: "✅ Запомнил новую информацию"
+    alt Финансовый анализ
+        HA->>AV: Получить данные TSLA
+        AV-->>HA: Финансовые данные
+        HA->>FV: Получить график TSLA
+        FV-->>HA: Изображение графика
+        HA->>OA: Анализ изображения (GPT-4o Vision)
+        OA-->>HA: Рекомендация Buy/Sell/Hold
     end
+    
+    alt Веб-поиск
+        HA->>SD: Поиск "TSLA последние новости"
+        SD-->>HA: Результаты поиска
+    end
+    
+    alt Умная память
+        HA->>PM: upsert_document("Покажи график TSLA")
+        PM->>OA: create_embedding
+        OA-->>PM: vector
+        
+        PM->>P: query (найти самый похожий)
+        P-->>PM: match (score: 0.94)
+        
+        Note over PM: THRESHOLD = 0.9
+        
+        alt score > 0.9
+            PM->>P: upsert (ID существующего вектора)
+            PM-->>HA: {action: "updated", score: 0.94}
+        else score <= 0.9
+            PM->>P: upsert (новый ID)
+            PM-->>HA: {action: "inserted"}
+        end
+    end
+    
+    HA->>B: Ответ с графиком и рекомендацией
+    B->>U: Отправка ответа пользователю
 ```
 
 </div>
