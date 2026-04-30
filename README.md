@@ -184,12 +184,12 @@ sequenceDiagram
 ## 🖼 Скриншоты работы
 
 ### Интерфейс Telegram-бота
-| Похожее сообщение | Обновление записи | Статистика |
+| FinAnalyst Bot | Financial Forecast | Pinecone Index |
 |:---:|:---:|:---:|
-| ![Похожее сообщение](Screenshots/Похожее%20сообщение.png) | ![Обновление записи](Screenshots/Обновление%20записи%20похожим.png) | ![Stats](Screenshots/Stats%20command.png) |
+| ![FinAnalyst Bot](Screenshots/FinAnalyst%20Telegram%20bot.png) | ![Financial Forecast](Screenshots/FinForecastAAPL.png) | ![Pinecone Index](Screenshots/Pinecone%20znaika3%20index.png) |
 
 ### Работа в терминале (Логирование)
-![Terminal](Screenshots/Terminal%20Sunny%20Update.png)
+![Terminal](Screenshots/Terminal%20hay-tg_bot.png)
 
 ### Панель управления Pinecone
-![Pinecone Index](Screenshots/Pinecone%20Index.png)
+![Pinecone Index](Screenshots/Pinecone%20znaika3%20index.png)
