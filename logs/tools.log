@@ -1,0 +1,46 @@
+2026-04-29 19:30:11.730 | INFO     | __main__:run:98 - Starting financial image analysis process
+2026-04-29 19:30:11.731 | INFO     | __main__:run:107 - Selected symbol GOOGL, fetching chart from https://finviz.com/chart.ashx?t=GOOGL&ty=c&ta=1&p=d&s=l
+2026-04-29 19:30:12.026 | DEBUG    | __main__:run:112 - Sending request to OpenAI Vision model
+2026-04-29 19:30:19.397 | INFO     | __main__:run:130 - Successfully received description from OpenAI Vision
+2026-04-29 19:31:55.985 | INFO     | __main__:run:72 - Fetching financial fact from Alpha Vantage
+2026-04-29 19:31:55.985 | INFO     | __main__:run:98 - Starting financial image analysis process
+2026-04-29 19:31:55.986 | INFO     | __main__:run:107 - Selected symbol TSLA, fetching chart from https://finviz.com/chart.ashx?t=TSLA&ty=c&ta=1&p=d&s=l
+2026-04-29 19:31:56.353 | DEBUG    | __main__:run:112 - Sending request to OpenAI Vision model
+2026-04-29 19:31:56.848 | WARNING  | __main__:run:83 - No news feed items found in Alpha Vantage response
+2026-04-29 19:32:04.830 | INFO     | __main__:run:130 - Successfully received description from OpenAI Vision
+2026-04-29 19:37:53.981 | INFO     | __main__:run:98 - Starting financial image analysis process
+2026-04-29 19:37:53.981 | INFO     | __main__:run:107 - Selected symbol TSLA, fetching chart from https://finviz.com/chart.ashx?t=TSLA&ty=c&ta=1&p=d&s=l
+2026-04-29 19:37:54.251 | DEBUG    | __main__:run:112 - Sending request to OpenAI Vision model
+2026-04-29 19:38:00.796 | INFO     | __main__:run:130 - Successfully received description from OpenAI Vision
+2026-04-29 19:39:10.075 | INFO     | __main__:run:98 - Starting financial image analysis process
+2026-04-29 19:39:10.075 | INFO     | __main__:run:107 - Selected symbol TSLA, fetching chart from https://finviz.com/chart.ashx?t=TSLA&ty=c&ta=1&p=d&s=l
+2026-04-29 19:39:10.362 | DEBUG    | __main__:run:112 - Sending request to OpenAI Vision model
+2026-04-29 19:39:17.434 | INFO     | __main__:run:130 - Successfully received description from OpenAI Vision
+2026-04-30 20:06:40.325 | INFO     | __main__:run:99 - Starting financial image analysis process
+2026-04-30 20:06:40.345 | INFO     | __main__:run:108 - Selected symbol AAPL, fetching chart from https://finviz.com/chart.ashx?t=AAPL&ty=c&ta=1&p=d&s=l
+2026-04-30 20:06:40.622 | DEBUG    | __main__:run:113 - Sending request to OpenAI Vision model
+2026-04-30 20:06:46.695 | INFO     | __main__:run:131 - Successfully received description from OpenAI Vision
+2026-04-30 20:08:17.953 | INFO     | __main__:run:99 - Starting financial image analysis process
+2026-04-30 20:08:17.953 | INFO     | __main__:run:108 - Selected symbol MSFT, fetching chart from https://finviz.com/chart.ashx?t=MSFT&ty=c&ta=1&p=d&s=l
+2026-04-30 20:08:18.263 | DEBUG    | __main__:run:113 - Sending request to OpenAI Vision model
+2026-04-30 20:08:23.789 | INFO     | __main__:run:131 - Successfully received description from OpenAI Vision
+2026-04-30 20:10:18.373 | INFO     | __main__:run:99 - Starting financial image analysis process
+2026-04-30 20:10:18.373 | INFO     | __main__:run:108 - Selected symbol BTC, fetching chart from https://finviz.com/chart.ashx?t=BTC&ty=c&ta=1&p=d&s=l
+2026-04-30 20:10:18.650 | DEBUG    | __main__:run:113 - Sending request to OpenAI Vision model
+2026-04-30 20:10:25.300 | INFO     | __main__:run:131 - Successfully received description from OpenAI Vision
+2026-04-30 21:45:12.491 | INFO     | __main__:run:101 - Starting financial image analysis process
+2026-04-30 21:45:12.505 | INFO     | __main__:run:110 - Selected symbol AAPL, fetching chart from https://finviz.com/chart.ashx?t=AAPL&ty=c&ta=1&p=d&s=l
+2026-04-30 21:45:12.788 | DEBUG    | __main__:run:115 - Sending request to OpenAI Vision model
+2026-04-30 21:45:20.696 | INFO     | __main__:run:133 - Successfully received description from OpenAI Vision
+2026-04-30 21:55:44.202 | INFO     | __main__:run:101 - Starting financial image analysis process
+2026-04-30 21:55:44.202 | INFO     | __main__:run:108 - Selected symbol AAPL, fetching chart from https://finviz.com/chart.ashx?t=AAPL&ty=c&ta=1&p=d&s=l
+2026-04-30 21:55:44.476 | DEBUG    | __main__:run:113 - Sending request to OpenAI Vision model
+2026-04-30 21:55:52.704 | INFO     | __main__:run:131 - Successfully received description from OpenAI Vision
+2026-04-30 22:04:12.446 | INFO     | __main__:run:115 - Starting financial image analysis process
+2026-04-30 22:04:12.447 | INFO     | __main__:run:124 - Selected symbol MSFT, fetching chart from https://finviz.com/chart.ashx?t=MSFT&ty=c&ta=1&p=d&s=l
+2026-04-30 22:04:12.742 | DEBUG    | __main__:run:129 - Sending request to OpenAI Vision model
+2026-04-30 22:04:18.975 | INFO     | __main__:run:147 - Successfully received description from OpenAI Vision
+2026-04-30 22:07:50.726 | INFO     | __main__:run:115 - Starting financial image analysis process
+2026-04-30 22:07:50.726 | INFO     | __main__:run:124 - Selected symbol BTC, fetching chart from https://finviz.com/chart.ashx?t=BTC&ty=c&ta=1&p=d&s=l
+2026-04-30 22:07:51.032 | DEBUG    | __main__:run:129 - Sending request to OpenAI Vision model
+2026-04-30 22:07:57.326 | INFO     | __main__:run:147 - Successfully received description from OpenAI Vision
